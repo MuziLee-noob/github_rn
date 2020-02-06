@@ -5,6 +5,7 @@ import {
 import {createStackNavigator} from 'react-navigation-stack';
 import WelcomePage from '../page/WelcomePage';
 import HomePage from '../page/HomePage';
+import DetailPage from '../page/DetailPage';
 
 
 const InitNavigator = createStackNavigator(
@@ -25,6 +26,9 @@ const MainNavigator = createStackNavigator(
             navigationOptions: {
                 headerShown: false
             }
+        },
+        DetailPage: {
+            screen: DetailPage
         }
     }
 );
