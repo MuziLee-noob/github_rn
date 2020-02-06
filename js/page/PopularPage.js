@@ -5,7 +5,7 @@ import {
     StyleSheet,
 } from 'react-native';
 
-export default class PopularPage {
+export default class PopularPage extends Component {
     render() {
         return (
             <View style={styles.container}>

@@ -5,7 +5,7 @@ import {
     StyleSheet,
 } from 'react-native';
 
-export default class MyPage {
+export default class MyPage extends Component {
     render() {
         return (
             <View style={styles.container}>

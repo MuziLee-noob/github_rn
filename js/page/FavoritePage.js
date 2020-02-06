@@ -5,7 +5,7 @@ import {
     StyleSheet,
 } from 'react-native';
 
-export default class FavoritePage {
+export default class FavoritePage extends Component {
     render() {
         return (
             <View style={styles.container}>
