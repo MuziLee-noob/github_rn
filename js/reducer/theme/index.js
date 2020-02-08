@@ -2,6 +2,6 @@ const defaultState = {
     theme: 'blue'
 };
 
-export default function onAction (theme=defaultState) {
-
+export default function onAction (state=defaultState) {
+    return state;
 }
