@@ -7,6 +7,7 @@ import WelcomePage from '../page/WelcomePage';
 import HomePage from '../page/HomePage';
 import DetailPage from '../page/DetailPage';
 
+export const rootCam = 'Init';
 
 const InitNavigator = createStackNavigator(
     {
