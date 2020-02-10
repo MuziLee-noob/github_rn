@@ -6,7 +6,7 @@ import {
     Button
 } from 'react-native';
 
-export default class TrendingPage extends Component {
+export default class DetailPage extends Component {
     render() {
         const {navigation} = this.props;
         return (

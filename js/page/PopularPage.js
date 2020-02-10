@@ -15,10 +15,11 @@ import NavigationUtil from '../navigator/NavigationUtil';
 import actions from '../action';
 import PopularItem from '../common/PopularItem';
 import {onLoadMorePopular, onLoadPopularData} from '../action/popular';
+import NavigationBar from '../common/NavigationBar';
 
 const URL = 'https://api.github.com/search/repositories?q=';
 const QUERY_STR = '&sort=starts';
-const THEME_COLOR = 'red';
+const THEME_COLOR = '#678';
 
 export default class PopularPage extends Component {
     constructor(props) {
@@ -38,6 +39,15 @@ export default class PopularPage extends Component {
         return tabs;
     }
     render() {
+        let statusBar = {
+            backgroundColor: THEME_COLOR,
+            barStyle: 'light-content'
+        };
+        let navigationBar = <NavigationBar
+            title={'最热'}
+            statusBar={statusBar}
+            style={{backgroundColor: THEME_COLOR}}
+        />;
         const TopTabNavigator = createAppContainer(createMaterialTopTabNavigator(
             this._genTabs(),
             {
@@ -46,7 +56,7 @@ export default class PopularPage extends Component {
                     scrollEnabled: true,
                     tabStyle: styles.tabStyle,
                     style: {
-                        backgroundColor: '#a67',
+                        backgroundColor: THEME_COLOR,
                     },
                     indicatorStyle: styles.indicatorStyle,
                     labelStyle: styles.labelStyle
@@ -55,6 +65,7 @@ export default class PopularPage extends Component {
         ));
         return (
             <View style={styles.container}>
+                {navigationBar}
                 <TopTabNavigator/>
             </View>
         )
