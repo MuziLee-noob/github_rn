@@ -85,6 +85,7 @@ export default class DataStore {
                         throw new Error('Network response was not ok.');
                     })
                     .then((responseData) => {
+                        // 保存到本地AsyncStorage
                         this.saveData(url, responseData);
                         resolve(responseData);
                     })
@@ -97,6 +98,7 @@ export default class DataStore {
                         if (!items) {
                             throw new Error('responseData is null');
                         }
+                        // 保存到本地AsyncStorage
                         this.saveData(url, items);
                         resolve(items);
                     })

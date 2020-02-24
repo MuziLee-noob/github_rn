@@ -8,7 +8,7 @@ const NAV_BAR_HEIGHT = Platform.OS === 'ios' ? NAV_BAR_HEIGHT_IOS : NAV_BAR_HEIG
 const STATUS_BAR_HEIGHT = Platform.OS !== 'ios' ? 0 : 20;//状态栏的高度
 const StatusBarShape = {
     barStyle: PropTypes.oneOf(['light-content', 'default']),
-    hidden: PropTypes.boolean,
+    hidden: PropTypes.bool,
     backgroundColor: PropTypes.string
 };
 
@@ -18,7 +18,7 @@ export default class NavigationBar extends Component {
         title: PropTypes.string,
         titleView: PropTypes.element,
         titleLayoutStyle: ViewPropTypes.style,
-        hide: PropTypes.boolean,
+        hide: PropTypes.bool,
         statusBar: PropTypes.shape(StatusBarShape),
         rightButton: PropTypes.element,
         leftButton: PropTypes.element

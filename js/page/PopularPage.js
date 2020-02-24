@@ -18,7 +18,7 @@ import {onLoadMorePopular, onLoadPopularData} from '../action/popular';
 import NavigationBar from '../common/NavigationBar';
 
 const URL = 'https://api.github.com/search/repositories?q=';
-const QUERY_STR = '&sort=starts';
+const QUERY_STR = '&sort=stars';
 const THEME_COLOR = '#678';
 
 export default class PopularPage extends Component {
@@ -109,7 +109,7 @@ class PopularTab extends Component {
             store = {
                 items: [],
                 isLoading: false,
-                projectModes: [],
+                projectModels: [],
                 hideLoadingMore: true,
             }
         }
@@ -160,7 +160,7 @@ class PopularTab extends Component {
         return (
             <View style={styles.container}>
                 <FlatList
-                    data={store.projectModes}
+                    data={store.projectModels}
                     renderItem={data => this.renderItem(data)}
                     keyExtractor={item => '' + item.id}
                     refreshControl={
